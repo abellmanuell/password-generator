@@ -1,4 +1,7 @@
-<div style='font-size:100px; text-align:center;'>&#128273;</div>
 
-<h1 style="text-align:center"><strong>Password Generator</strong></h1>
-<p style="text-align:center"><em>Generate a secure passwords!</em></p>
+<center>
+<img src="./src/assets/istockphoto-1250724789-612x612.jpg" width="100">
+</center>
+
+<h1 align="center" ><strong>Password Generator</strong></h1>
+<p align="center"><em>Generate a secure passwords!</em></p>
