@@ -40,3 +40,5 @@ btn.onclick = function(ev){
 	let password = passwordGenerator(charsLibrary(upperChars, lowerChars, numbers, symbols))
 	h1.innerHTML = password
 }
+
+function(){};
