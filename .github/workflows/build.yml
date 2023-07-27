@@ -37,7 +37,7 @@ jobs:
         run: npm install -g pnpm
 
       - name: Install 🔧
-        run: pnpm install --no-frozen-lockfile
+        run: pnpm install
 
       - name: Build 🏗️
         run: |
