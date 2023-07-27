@@ -1,0 +1,41 @@
+name: Deploy To Netlify
+run-name: ${{ github.actor }} update ${{ github.repository }}
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repostory 🛎️
+        uses: actions/checkout@v3
+
+      - name: Setup Node Environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: latest
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install 🔧
+        run: pnpm install
+
+      - name: Build 🏗️
+        run: |
+          pnpm store prune 
+          pnpm run build
+
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v2.0
+        with:
+          publish-dir: "./dist"
+          production-branch: main
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
