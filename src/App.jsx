@@ -21,8 +21,8 @@ function App() {
             symbols
           </li>
           <li>
-            Not a word that cacn be found in a dictionary or the name of a
-            person, character, products, organzation.
+            Not a word that can be found in a dictionary or the name of a
+            person, character, product, organization.
           </li>
         </ol>
       </div>
